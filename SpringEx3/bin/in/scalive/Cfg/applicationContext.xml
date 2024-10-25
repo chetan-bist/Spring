@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Dependent spring bean cfg -->
+    <bean class="in.scalive.Beans.Laptop" id="lpObj">
+    	<property name="brand" value="acer"/>
+    	
+    </bean>
+	
+	<!--Target spring bean cfg-->
+	<bean class="in.scalive.Beans.Programmer" id="prObj">
+		<property name="name" value="chetan"/>
+		<property name="lp" ref="lpObj"/>
+	</bean>
+</beans>
